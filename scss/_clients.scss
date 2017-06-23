@@ -1,0 +1,59 @@
+.clients{
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+  background-color: $primary-color;
+  color: $white;
+
+  .container{
+    overflow: hidden;
+  }
+
+}
+
+.client-testimonial{
+  margin: 0 0 2rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid $white;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    float: left;
+    width: 60%;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  p{
+    margin-top: 0;
+    font-size: 1.875rem;
+  }
+
+  cite{
+    font-style: normal;
+    font-size: .8125rem;
+    letter-spacing: 1px;
+  }
+}
+
+.client-cta{
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    float: left;
+    width: calc(40% - 4rem);
+    margin-left: 4rem;
+  }
+
+  .button{
+    border-color: $white;
+    color: $white;
+  }
+}
+
+.client-types{
+  @include unstyled-list();
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+
+  li{
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,146 @@
+
+
+.site-form{
+  margin-top: 2rem;
+
+  //resetting skeleton's default form input styling
+  input, select, textarea{
+    padding: .5rem;
+    font-size: .9rem;
+  }
+
+  .field{
+    margin-bottom: 1.5rem;
+
+    &.required{
+      .heading{
+        label{
+          &:after{
+            content: " *";
+            color: red;
+          }
+        }
+      }
+    }
+
+    &.inline{
+      display: flex;
+      input[type=text]{
+        width: 80%;
+      }
+      button{
+        width: 20%;
+      }
+    }
+  }
+
+  h3{
+    width: 100%;
+    margin-bottom: 1rem;
+    //border-bottom: 1px solid $border-color;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: $dark-grey;
+    text-transform: none;
+  }
+
+  input[type=text]{
+    width: 100%;
+  }
+
+  textarea{
+    width: 100%;
+  }
+
+  .heading{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .8rem;
+  }
+
+  .instructions{
+    margin-top: -.5rem;
+    margin-bottom: .5rem;
+    font-size: .85rem;
+    color: $dark-grey;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .input{
+    div{
+      margin-bottom: .75rem;
+      line-height: 1;
+    }
+
+    label{
+      display: block;
+      margin-top: .75rem;
+      font-weight: 400;
+      vertical-align: middle;
+
+      &:first-child{
+        margin-top: .5rem;
+      }
+    }
+
+    input[type=checkbox], input[type=radio]{
+      display: inline-block;
+      margin-right: .5rem;
+      vertical-align: top;
+    }
+  }
+}
+
+.notifications{
+  margin-bottom: 2rem;
+
+  &.errors{
+    background: lighten($error-color, 40%);
+    color: darken($error-color, 10%);
+  }
+
+  &.success{
+    background: lighten($success-color, 40%);
+    color: darken($success-color, 10%);
+  }
+
+  .notification{
+    margin-bottom: .5rem;
+    padding: 1rem;
+    font-style: italic;
+
+    &:empty{
+      height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.contact-form{
+
+  .input{
+    margin-bottom: 2rem;
+  }
+
+  label{
+    display: block;
+    margin-bottom: .25rem;
+    text-transform: uppercase;
+    font-size: .875rem;
+    letter-spacing: 1px;
+  }
+
+  input[type=text], select, textarea{
+    background: $light-grey;
+    border: 0;
+    color: $font-color;
+  }
+
+  input[type=text], textarea{
+    padding: 1rem;
+  }
+}

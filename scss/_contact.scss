@@ -1,0 +1,19 @@
+.contact{
+  .name{
+    display: block;
+    font-size: 1.125rem;
+
+    a{
+      color: $primary-color;
+    }
+  }
+
+  .street-address{
+    display: block;
+  }
+
+  .email{
+    display: block;
+    margin-top: 1.125rem;
+  }
+}

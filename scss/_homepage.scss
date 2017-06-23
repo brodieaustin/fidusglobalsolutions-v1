@@ -1,0 +1,92 @@
+/*homepage specific styles*/
+
+.homepage-section{
+
+  h2{
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    letter-spacing: .5px;
+    text-align: center;
+  }
+}
+
+.hero{
+  background: url('../img/running.jpg') no-repeat top center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    text-align: left;
+  }
+
+  .tint{
+    background-color: rgba(darken($primary-color, 5%), .9);
+  }
+
+  .container{
+    margin-bottom: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  p{
+    margin: 0;
+    font-size: 2.75rem;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: 90%;
+    }
+  }
+
+  .button{
+    margin-top: 2rem;
+    border-color: $white;
+    color: $white;
+  }
+}
+
+.team{
+  overflow: hidden;
+
+  .team-member-previews{
+
+    @media screen and (#{$bp-larger-than-phablet}){
+      float: left;
+      width: 60%;
+    }
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: 40%;
+    }
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      width: 50%;
+    }
+  }
+  .team-description{
+
+    margin-bottom: 4rem;
+
+    @media screen and (#{$bp-larger-than-phablet}){
+      float: left;
+      width: calc(40% - 2rem);
+      margin-left: 2rem;
+    }
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: calc(60% - 2rem);
+    }
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      width: calc(50% - 2rem);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.button{
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border: 0;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: $primary-font-family;
+  font-size: .75rem;
+  text-transform: uppercase;
+  transition: opacity .2s ease;
+  text-align: center;
+
+  &.more{
+    display: block;
+    width: 40%;
+    margin: 2rem auto;
+    background: $primary-color;
+    color: $font-color;
+  }
+
+  &:hover{
+    opacity: .7;
+  }
+
+  &.border{
+    background: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
+
+  &.solid{
+    background: $primary-color;
+    color: $white;
+  }
+
+  &.disabled{
+    background: transparent !important;
+  }
+
+  &.call-to-action{
+    background-color: $secondary-color;
+    color: $white;
+  }
+
+  &.submit{
+    background-color: $secondary-color;
+    color: $white;
+  }
+}

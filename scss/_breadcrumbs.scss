@@ -1,0 +1,31 @@
+.breadcrumbs{
+  @include unstyled-list();
+  margin: 1rem 0;
+}
+
+.breadcrumb{
+  display: inline-block;
+  font-size: .8125rem;
+  text-transform: uppercase;
+
+  &:after{
+    display: inline-block;
+    content: "/";
+    margin: 0 .25rem 0 .5rem;
+    color: $dark-grey;
+  }
+
+  &:last-child{
+    &:after{
+      content: "";
+    }
+
+    a{
+      color: $font-color;
+    }
+  }
+
+  a{
+    color: $dark-grey;
+  }
+}

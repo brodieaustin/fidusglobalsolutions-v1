@@ -1,0 +1,54 @@
+/*cards*/
+
+.card{
+  position: relative;
+  background-color: #fff;
+}
+
+.card-container{
+  display: block;
+  position: relative;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.card-point{
+  position: absolute;
+  bottom: -1.5rem;
+  text-align: center;
+  height: 3rem;
+  width: 100%;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #fff;
+    transform: skew(0deg, 10deg);
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #fff;;
+    transform: skew(0deg, -10deg);
+  }
+}
+
+.page-card{
+  .card-container{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .card-point{
+    bottom: -3rem;
+    height: 5.5rem;
+  }
+}

@@ -1,0 +1,86 @@
+.site-footer{
+  padding-bottom: 2rem;
+  background-color: $light-grey;
+
+  .container{
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .brand{
+    max-width: 90%;
+    font-size: 1.125rem;
+    color: $font-color;
+  }
+}
+
+.contact{
+  margin-bottom: 2rem;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: 40%;
+  }
+}
+
+.engage{
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: calc(60% - 2rem);
+    margin-left: 2rem;
+    text-align: right;
+  }
+
+  .social{
+
+    li{
+      margin-right: .75rem;
+
+      @media screen and (#{$bp-larger-than-tablet}){
+        margin-left: 1rem;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.newsletter-signup{
+  width: 100%;
+  margin-top: 0;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    float: right;
+  }
+
+  button[type=submit]{
+    background-color: $secondary-color;
+  }
+
+  p{
+    text-align: left;
+    font-size: .875rem;
+  }
+}
+
+.policy-pages{
+  @include unstyled-list();
+  margin-top: 2rem;
+
+  li{
+    margin-bottom: .5rem;
+    margin-right: 1rem;
+    font-size: .875rem;
+    color: lighten($font-color, 20%);
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: inline-block;
+    }
+
+    a{
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}

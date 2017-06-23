@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+<article class="page">
+  <div class="container">
+    <ul class="breadcrumbs">
+      {% for crumb in page.breadcrumbs %}
+        <li class="breadcrumb"><a href="{{ site.baseurl }}/{% if crumb != 'home' %}{{ crumb }}{% endif %}">{{ crumb }}</a></li>
+      {% endfor %}
+      <li class="breadcrumb"><a href="{{ page.url }}">{{ page.title }}</a></li>
+    </ul>
+    <div class="card page-card" style="min-height: 20rem;">
+      <div class="color-banner">
+        <svg viewBox="0 0 87 14" xmlns="http://www.w3.org/2000/svg"><title>Page 1</title><g fill="none" fill-rule="evenodd"><path fill="#004888" d="M17.94 13.934h14.882V0H17.94"/><path fill="#BBBDBF" d="M0 13.934h14.88V0H0"/><path fill="#9A8478" d="M35.88 13.934h14.88V0H35.88"/><path fill="#BE1E2C" d="M53.82 13.934H68.7V0H53.82"/><path fill="#C2B49A" d="M71.758 13.934H86.64V0H71.758"/></g></svg>
+      </div>
+      <div class="card-container">
+        <header class="page-header">
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}
+            <p class="subtitle">{{ page.subtitle }}</p>
+          {% endif %}
+        </header>
+        <section class="page-content {% if page.has_columns == true %} columns{% endif %}">
+          {{ content }}
+        </section>
+      </div>
+      <div class="card-point"></div>
+    </div>
+  </div>
+</article>
