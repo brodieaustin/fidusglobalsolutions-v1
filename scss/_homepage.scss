@@ -39,15 +39,16 @@
 
   p{
     margin: 0;
-    font-size: 2.75rem;
+    font-size: 2.25rem;
 
     @media screen and (#{$bp-larger-than-tablet}){
       width: 90%;
+      font-size: 2.75rem;
     }
   }
 
   .button{
-    margin-top: 2rem;
+    margin: 2rem 0 1rem 0;
     border-color: $white;
     color: $white;
   }

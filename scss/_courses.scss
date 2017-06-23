@@ -23,7 +23,7 @@
 .course-preview{
   max-width: 20rem;
   margin-top: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
 
@@ -39,20 +39,6 @@
 
   a{
     color: $font-color;
-  }
-
-  h3{
-    margin-bottom: 0;
-    color: $primary-color;
-    font-size: 1.5rem;
-
-    small{
-      display: block;
-      margin-top: 1rem;
-      color: $secondary-color;
-      font-size: 1rem;
-      font-weight: 400;
-    }
   }
 
   hr{
@@ -71,6 +57,20 @@
 
   p{
     font-size: .875rem;
+  }
+}
+
+.course-title{
+  margin-bottom: 0;
+  color: $primary-color;
+  font-size: 1.5rem;
+
+  small{
+    display: block;
+    margin-top: 1rem;
+    color: $secondary-color;
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
 
@@ -95,5 +95,48 @@
 
   p{
     margin-top: 0;
+  }
+}
+
+.course-list{
+  @include unstyled-list();
+}
+
+.course-list-item{
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $light-grey;
+
+  &:last-child{
+    border-bottom: 0;
+  }
+
+  a{
+    display: flex;
+    flex-wrap: wrap;
+    color: inherit;
+    overflow: hidden;
+  }
+
+  .course-title{
+    width: 100%;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: 30%;
+    }
+
+    small{
+      margin-top: .25rem;
+    }
+  }
+
+  .course-description{
+    width: 100%;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: calc(70% - 2rem);
+      margin-left: 2rem;
+
+    }
   }
 }

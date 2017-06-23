@@ -13,7 +13,7 @@
 .client-testimonial{
   margin: 0 0 2rem 0;
   padding-bottom: 2rem;
-  border-bottom: 2px solid $white;
+  border-bottom: 1px solid $light-grey;
 
   @media screen and (#{$bp-larger-than-tablet}){
     float: left;

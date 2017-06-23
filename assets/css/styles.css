@@ -454,13 +454,7 @@ a {
           .site-form .field.inline input[type=text] {
             width: 80%; } }
       .site-form .field.inline button {
-        width: 40%; }
-        @media screen and (min-width: 35rem) {
-          .site-form .field.inline button {
-            width: 30%; } }
-        @media screen and (min-width: 55rem) {
-          .site-form .field.inline button {
-            width: 20%; } }
+        width: auto; }
   .site-form h3 {
     width: 100%;
     margin-bottom: 1rem;
@@ -594,13 +588,7 @@ a {
           .site-form .field.inline input[type=text] {
             width: 80%; } }
       .site-form .field.inline button {
-        width: 40%; }
-        @media screen and (min-width: 35rem) {
-          .site-form .field.inline button {
-            width: 30%; } }
-        @media screen and (min-width: 55rem) {
-          .site-form .field.inline button {
-            width: 20%; } }
+        width: auto; }
   .site-form h3 {
     width: 100%;
     margin-bottom: 1rem;
@@ -684,14 +672,15 @@ a {
   display: block;
   position: relative;
   padding: 2rem;
-  z-index: 1000; }
+  z-index: 500; }
 
 .card-point {
   position: absolute;
   bottom: -1.5rem;
   text-align: center;
   height: 3rem;
-  width: 100%; }
+  width: 100%;
+  z-index: 100; }
   .card-point:before {
     content: '';
     position: absolute;
@@ -701,7 +690,8 @@ a {
     width: 50%;
     background-color: #fff;
     -webkit-transform: skew(0deg, 10deg);
-            transform: skew(0deg, 10deg); }
+            transform: skew(0deg, 10deg);
+    z-index: 100; }
   .card-point:after {
     content: '';
     position: absolute;
@@ -711,11 +701,16 @@ a {
     width: 50%;
     background: #fff;
     -webkit-transform: skew(0deg, -10deg);
-            transform: skew(0deg, -10deg); }
+            transform: skew(0deg, -10deg);
+    z-index: 100; }
 
 .page-card .card-container {
-  padding-left: 4rem;
-  padding-right: 4rem; }
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media screen and (min-width: 55rem) {
+    .page-card .card-container {
+      padding-left: 4rem;
+      padding-right: 4rem; } }
 
 .page-card .card-point {
   bottom: -3rem;
@@ -760,12 +755,12 @@ a {
 
 .site-nav {
   position: fixed;
-  top: 7rem;
+  top: 8.1rem;
   left: -100%;
   width: 100%;
   height: 100%;
-  padding: 4rem 0 1rem;
-  background-color: #BE1E2D;
+  background: #BE1E2D url("../img/running.jpg") no-repeat top center;
+  background-size: cover;
   z-index: 999;
   opacity: .99;
   -webkit-transition: left .2s ease-in-out;
@@ -777,12 +772,19 @@ a {
       width: auto;
       height: auto;
       margin-top: 4.75rem;
-      padding: 0;
-      background-color: transparent;
       border-top: 0;
       opacity: 1; } }
   .site-nav.open {
     left: 0; }
+  .site-nav .tint {
+    width: 100%;
+    height: 100%;
+    padding: 4rem 0 1rem;
+    background-color: rgba(190, 30, 45, 0.8); }
+    @media screen and (min-width: 55rem) {
+      .site-nav .tint {
+        padding: 0;
+        background: #fff; } }
 
 .nav {
   list-style: none;
@@ -815,27 +817,26 @@ a {
 
 .site-nav-control {
   position: absolute;
-  top: 2rem;
-  right: 1rem;
+  top: 2.5rem;
+  right: 2rem;
   display: inline-block;
   float: right;
-  width: 4rem;
+  width: 6rem;
   height: auto;
-  padding: .375rem 1rem;
+  padding: .75rem 1rem;
   color: #004888;
   background: #fff;
-  border-color: transparent;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem; }
+  border: 1px solid #004888;
+  font-family: "Montserrat", sans-serif; }
   @media screen and (min-width: 55rem) {
     .site-nav-control {
       display: none; } }
 
 .open-site-nav:before {
-  content: '\2630'; }
+  content: 'Menu'; }
 
 .close-site-nav:before {
-  content: '\00D7'; }
+  content: 'Close'; }
 
 .site-footer {
   padding-bottom: 2rem;
@@ -937,7 +938,7 @@ a {
 .course-preview {
   max-width: 20rem;
   margin-top: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto; }
   @media screen and (min-width: 55rem) {
@@ -949,16 +950,6 @@ a {
     margin-top: -2px; }
   .course-preview a {
     color: #333; }
-  .course-preview h3 {
-    margin-bottom: 0;
-    color: #004888;
-    font-size: 1.5rem; }
-    .course-preview h3 small {
-      display: block;
-      margin-top: 1rem;
-      color: #BE1E2D;
-      font-size: 1rem;
-      font-weight: 400; }
   .course-preview hr {
     width: 4.5rem;
     margin: 1.25rem auto 2rem;
@@ -971,6 +962,17 @@ a {
     font-weight: 400; }
   .course-preview p {
     font-size: .875rem; }
+
+.course-title {
+  margin-bottom: 0;
+  color: #004888;
+  font-size: 1.5rem; }
+  .course-title small {
+    display: block;
+    margin-top: 1rem;
+    color: #BE1E2D;
+    font-size: 1rem;
+    font-weight: 400; }
 
 .course-meta {
   list-style: none;
@@ -990,6 +992,39 @@ a {
     text-transform: uppercase; }
   .course-meta p {
     margin-top: 0; }
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.course-list-item {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #DCDDDE; }
+  .course-list-item:last-child {
+    border-bottom: 0; }
+  .course-list-item a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    color: inherit;
+    overflow: hidden; }
+  .course-list-item .course-title {
+    width: 100%; }
+    @media screen and (min-width: 55rem) {
+      .course-list-item .course-title {
+        width: 30%; } }
+    .course-list-item .course-title small {
+      margin-top: .25rem; }
+  .course-list-item .course-description {
+    width: 100%; }
+    @media screen and (min-width: 55rem) {
+      .course-list-item .course-description {
+        width: calc(70% - 2rem);
+        margin-left: 2rem; } }
 
 /* team memebrs */
 .team {
@@ -1084,7 +1119,7 @@ a {
 .client-testimonial {
   margin: 0 0 2rem 0;
   padding-bottom: 2rem;
-  border-bottom: 2px solid #fff; }
+  border-bottom: 1px solid #DCDDDE; }
   @media screen and (min-width: 55rem) {
     .client-testimonial {
       float: left;
@@ -1147,12 +1182,13 @@ a {
         padding-bottom: 4rem; } }
   .hero p {
     margin: 0;
-    font-size: 2.75rem; }
+    font-size: 2.25rem; }
     @media screen and (min-width: 55rem) {
       .hero p {
-        width: 90%; } }
+        width: 90%;
+        font-size: 2.75rem; } }
   .hero .button {
-    margin-top: 2rem;
+    margin: 2rem 0 1rem 0;
     border-color: #fff;
     color: #fff; }
 

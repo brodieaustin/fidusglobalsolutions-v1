@@ -1,11 +1,11 @@
 .site-nav{
   position: fixed;
-  top: 7rem;
+  top: 8.1rem;
   left: -100%;
   width: 100%;
   height: 100%;
-  padding: 4rem 0 1rem;
-  background-color: $secondary-color;
+  background: $secondary-color url('../img/running.jpg') no-repeat top center;
+  background-size: cover;
   z-index: 999;
   opacity: .99;
   transition: left .2s ease-in-out;
@@ -16,14 +16,23 @@
     width: auto;
     height: auto;
     margin-top: 4.75rem;
-    padding: 0;
-    background-color: transparent;
     border-top: 0;
     opacity: 1;
   }
 
   &.open{
     left: 0;
+  }
+
+  .tint{
+    width: 100%;
+    height: 100%;
+    padding: 4rem 0 1rem;
+    background-color: rgba($secondary-color, .8);
+    @media screen and (#{$bp-larger-than-tablet}){
+      padding: 0;
+      background: $white;
+    }
   }
 }
 
@@ -67,18 +76,17 @@
 
 .site-nav-control {
   position: absolute;
-  top: 2rem;
-  right: 1rem;
+  top: 2.5rem;
+  right: 2rem;
   display: inline-block;
   float: right;
-  width: 4rem;
+  width: 6rem;
   height: auto;
-  padding: .375rem 1rem;
+  padding: .75rem 1rem;
   color: $primary-color;
   background: $white;
-  border-color: transparent;
+  border: 1px solid $primary-color;
   font-family: $primary-font-family;
-  font-size: 1.5rem;
 
   @media screen and (#{$bp-larger-than-tablet}){
     display: none;
@@ -86,9 +94,9 @@
 }
 
 .open-site-nav:before {
-  content: '\2630';
+  content: 'Menu';
 }
 
 .close-site-nav:before {
-  content: '\00D7';
+  content: 'Close';
 }
