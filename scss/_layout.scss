@@ -6,4 +6,8 @@
   max-width: $max-width;
   margin: 0 auto 2rem;
   padding: 2rem 2rem 0;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    padding: 2rem 1rem 0;
+  }
 }
